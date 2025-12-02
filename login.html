@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Login - BookStore</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo"><img src="iec.jpg" alt="logo">
+    </div>
+    <div class="site-name">IEC COLLEGE OF ENGINEERING & TECHNOLOGY</div>
+  </header>
+
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="login.html">Login</a>
+    <a href="register.html">Registration</a>
+    <a href="catalogue.html">Catalogue</a>
+    <a href="cart.html">Cart <span id="cart-count" class="cart-badge">0</span></a>
+  </nav>
+
+  <main class="content">
+    <aside class="left-col">
+      <ul>
+        <li>CSE</li>
+        <li>ECE</li>
+        <li>EEE</li>
+        <li>CIVIL</li>
+      </ul>
+    </aside>
+
+    <section class="main-col form-card">
+      <h2>Login Page</h2>
+      <form id="loginForm" onsubmit="return handleLogin(event)">
+        <label for="loginUser">User Name:</label>
+        <input id="loginUser" name="username" type="text" required />
+
+        <label for="loginPass">Password:</label>
+        <input id="loginPass" name="password" type="password" required />
+
+        <div class="form-actions">
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </div>
+
+        <p id="loginMessage" class="message"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">&copy; 2025 BookStore Example</footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Registration - BookStore</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo"><img src="iec.jpg" alt="logo">
+    </div>
+    <div class="site-name">IEC COLLEGE OF ENGINEERING & TECHNOLOGY</div>
+  </header>
+
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="login.html">Login</a>
+    <a href="register.html">Registration</a>
+    <a href="catalogue.html">Catalogue</a>
+    <a href="cart.html">Cart <span id="cart-count" class="cart-badge">0</span></a>
+  </nav>
+
+  <main class="content">
+    <aside class="left-col">
+      <ul>
+        <li>CSE</li>
+        <li>ECE</li>
+        <li>EEE</li>
+        <li>CIVIL</li>
+      </ul>
+    </aside>
+
+    <section class="main-col form-card">
+      <h2>Registration Form</h2>
+      <form id="regForm" onsubmit="return handleRegister(event)">
+        <label>Name (alphabets only, min 6 chars)</label>
+        <input id="name" type="text" required />
+
+        <label>Password (min 6 chars)</label>
+        <input id="password" type="password" required />
+
+        <label>E-mail</label>
+        <input id="email" type="text" required />
+
+        <label>Phone Number (10 digits)</label>
+        <input id="phone" type="text" required />
+
+        <label>Sex</label>
+        <label><input type="radio" name="sex" value="Male" checked/> Male</label>
+        <label><input type="radio" name="sex" value="Female"/> Female</label>
+
+        <label>Date of Birth</label>
+        <div class="dob">
+          <select id="dobDay"></select>
+          <select id="dobMonth"></select>
+          <select id="dobYear"></select>
+        </div>
+
+        <label>Languages Known</label>
+        <label><input type="checkbox" name="lang" value="English" /> English</label>
+        <label><input type="checkbox" name="lang" value="Telugu" /> Telugu</label>
+        <label><input type="checkbox" name="lang" value="Hindi" /> Hindi</label>
+        <label><input type="checkbox" name="lang" value="Tamil" /> Tamil</label>
+
+        <label>Address</label>
+        <textarea id="address" rows="3"></textarea>
+
+        <div class="form-actions">
+          <button type="submit">Register</button>
+          <button type="reset">Reset</button>
+        </div>
+
+        <p id="regMessage" class="message"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">&copy; 2025 BookStore Example</footer>
+  <script src="script.js"></script>
+</body>
+</html>
+
